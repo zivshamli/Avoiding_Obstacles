@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_heart_layout"
+        android:layout_width="@dimen/all_hearts_width"
+        android:layout_height="@dimen/all_heart_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/all_hearts_margin_top"
+
+        android:layout_marginRight="@dimen/default_margin">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart0"
+            android:layout_width="@dimen/all_hearts_width"
+            android:layout_height="@dimen/all_heart_height"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="@dimen/all_hearts_width"
+            android:layout_height="@dimen/all_heart_height"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/heart_margin"
+            app:srcCompat="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="@dimen/all_hearts_width"
+            android:layout_height="@dimen/all_heart_height"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_BTN_Layout"
+        android:orientation="horizontal"
+        android:layout_below="@id/main_heart_layout"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/figures_hor_lay_margin_left"
+        android:layout_marginRight="@dimen/figures_hor_lay_margin_right">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_Lane_0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_15"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_18"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:visibility="invisible"
+           >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_Lane_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/figure_between_margin">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_13"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_16"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_19"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_Lane_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/figure_between_margin2">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_14"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_17"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                android:layout_marginBottom="@dimen/all_cups_margin_button">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Police_IMG_20"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/police"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_player_image_height"
+        android:layout_above="@id/main_BTN_Layout"
+        android:layout_marginLeft="@dimen/figures_hor_lay_margin_left"
+        android:layout_marginRight="@dimen/figures_hor_lay_margin_right"
+        android:layout_marginBottom="@dimen/player_layout_bottom_margin"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_Player_IMG_0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/player">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_Player_IMG_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/figure_between_margin"
+            app:srcCompat="@drawable/player">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_Player_IMG_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/figure_between_margin2"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/player">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+    android:id="@+id/main_BTN_Layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="@dimen/button_BTN_margin"
+    android:layout_marginBottom="@dimen/button_margin"
+    android:orientation="horizontal">
+
+<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/main_FAB_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="L"
+        app:iconSize="@dimen/BTN_height"
+        android:backgroundTint="@color/green_A400"
+        app:icon="@drawable/baseline_arrow_circle_left_24"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/btn_side_margin"
+
+    />
+
+
+<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/main_FAB_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="R"
+        app:iconSize="@dimen/BTN_height"
+        android:backgroundTint="@color/green_A400"
+        app:icon="@drawable/baseline_arrow_circle_right_24"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_300"
+    tools:context=".ScoreActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/score_LBL_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/score_size"
+        android:textStyle="bold"
+        tools:text="Status\n000"/>
+
+<com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:contextClickable="true"
+        tools:text="Replay"
+        android:textSize="@dimen/btn_text_size"
+        app:iconSize="@dimen/BTN_height"
+        app:icon="@drawable/replay"
+        android:background="@color/purple_800"
+        android:layout_below="@id/score_LBL_result"
+        android:layout_margin="@dimen/default_margin"
+        />
+
+
+
+</RelativeLayout>
