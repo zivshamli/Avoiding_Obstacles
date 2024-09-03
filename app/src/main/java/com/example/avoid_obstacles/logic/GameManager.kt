@@ -46,7 +46,7 @@ class GameManager(private val lifeCount:Int=3) {
 
             }
         // To init more enemies
-        randFlag=Random.nextInt(1,4)
+        randFlag=Random.nextInt(1,3)
         if(randFlag==1)
         {
             randLane=Random.nextInt(0,Constants.COLS)
