@@ -31,8 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     val runnable: Runnable = object : Runnable {
         override fun run() {
-            gameManager.enemyMovement()
-            enemyMove()
+            obstaclesGamePlay()
             if (isEnd==false) {
                 refreshUI()
             }
@@ -102,16 +101,21 @@ class MainActivity : AppCompatActivity() {
                 refreshUI()
             }
 
-            fun enemyMove() {
+            fun obstaclesMove() {
 
                 for (i in 0 until enemy_IMGS.size) {
-                    if (gameManager.getEnemiesArr()[i] == 1) {
+                    if (gameManager.getObstaclesArr()[i] == 1) {
                         enemy_IMGS[i].visibility = View.VISIBLE
                     } else {
                         enemy_IMGS[i].visibility = View.INVISIBLE
                     }
                 }
 
+            }
+            fun obstaclesGamePlay()
+            {
+                gameManager.obstaclesMovement()
+                obstaclesMove()
             }
              private fun toast(text: String) {
                 Toast
@@ -143,10 +147,16 @@ class MainActivity : AppCompatActivity() {
             vibrator.vibrate(500)
         }
     }
+    fun toastAndVibrate(text: String)
+    {
+        toast(text)
+        vibrate()
+    }
+
+
     fun checkCollision() {
         if (gameManager.checkCollision(current_lane)==true) {
-            toast(Constants.CrushText)
-            vibrate()
+            toastAndVibrate(Constants.CrushText)
             if(gameManager.getCrush() != 0){
                 main_IMG_hearts[main_IMG_hearts.size-gameManager.getCrush()].visibility=View.INVISIBLE
             }
@@ -187,6 +197,8 @@ class MainActivity : AppCompatActivity() {
         timerOn = false
         handler.removeCallbacks(runnable)
     }
+
+
 
     override fun onPause() {
         super.onPause()
