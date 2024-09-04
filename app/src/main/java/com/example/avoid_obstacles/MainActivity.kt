@@ -175,7 +175,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun changeActivity(message: String){
         val intent = Intent(this, ScoreActivity::class.java)
-        var b = Bundle()
+        val b = Bundle()
         b.putString(Constants.STATUS_KEY,message)
         intent.putExtras(b)
         startActivity(intent)
