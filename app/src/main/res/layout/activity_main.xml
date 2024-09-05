@@ -15,7 +15,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="@dimen/all_hearts_margin_top"
 
-        android:layout_marginRight="@dimen/default_margin">
+        android:layout_marginEnd="@dimen/default_margin">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_heart0"
@@ -336,7 +336,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:contentDescription="L"
+        android:contentDescription="@string/Left"
         app:iconSize="@dimen/BTN_height"
         android:backgroundTint="@color/green_A400"
         app:icon="@drawable/baseline_arrow_circle_left_24"
@@ -353,7 +353,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:contentDescription="R"
+        android:contentDescription="@string/Right"
         app:iconSize="@dimen/BTN_height"
         android:backgroundTint="@color/green_A400"
         app:icon="@drawable/baseline_arrow_circle_right_24"

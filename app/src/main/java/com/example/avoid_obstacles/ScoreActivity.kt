@@ -39,9 +39,9 @@ class ScoreActivity : AppCompatActivity() {
     }
     private fun changeActivity(){
         val intent = Intent(this, MainActivity::class.java)
-        var b = Bundle()
+        val b = Bundle()
         intent.putExtras(b)
-        startActivity(intent);
+        startActivity(intent)
         finish()
     }
 

@@ -3,4 +3,6 @@
     <string name="default_str" />
     <string name="right">R</string>
     <string name="left">L</string>
+    <string name="Left">L</string>
+    <string name="Right">R</string>
 </resources>
