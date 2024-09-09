@@ -156,7 +156,7 @@ class MainActivity : AppCompatActivity() {
 
     fun checkCollision() {
         if (gameManager.checkCollision(current_lane)==true) {
-            toastAndVibrate(Constants.CrushText)
+            toastAndVibrate(Constants.CRUSHTEXT)
             if(gameManager.getCrush() != 0){
                 main_IMG_hearts[main_IMG_hearts.size-gameManager.getCrush()].visibility=View.INVISIBLE
             }
