@@ -11,6 +11,7 @@ import android.os.VibratorManager
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.avoid_obstacles.interfaces.Callback_SpeedCallback
 import com.example.avoid_obstacles.interfaces.Callback_TiltCallback
 import com.example.avoid_obstacles.logic.GameManager
 import com.example.avoid_obstacles.utilities.Constants
@@ -93,7 +94,15 @@ class MainActivity : AppCompatActivity() {
             override fun tiltRight() {
                playerMove(Constants.RIGHT)
             }
-        })
+        }, object : Callback_SpeedCallback {
+            override fun fastSpeed() {
+               speed=500L
+            }
+
+            override fun regularSpeed() {
+                speed=700L
+            }
+        } )
     }
 
     private fun speedChoice() {
