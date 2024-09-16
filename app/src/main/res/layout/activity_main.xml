@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     android:background="@drawable/road">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_score_LBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/all_hearts_margin_top"
+        android:layout_marginStart="@dimen/score_LBL_start_margin"
+        android:text="@string/default_text"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/score_LBL_text_size"
+        >
+
+    </com.google.android.material.textview.MaterialTextView>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/main_heart_layout"
         android:layout_width="@dimen/all_hearts_width"
@@ -220,7 +236,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/police"
-                android:layout_marginBottom="@dimen/all_cups_margin_button">
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
             </com.google.android.material.imageview.ShapeableImageView>
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -229,7 +246,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/police"
-                android:layout_marginBottom="@dimen/all_cups_margin_button">
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
             </com.google.android.material.imageview.ShapeableImageView>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_Police_IMG_8"
@@ -237,7 +255,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/police"
-                android:layout_marginBottom="@dimen/all_cups_margin_button">
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
             </com.google.android.material.imageview.ShapeableImageView>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_Police_IMG_11"
@@ -245,7 +264,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/police"
-                android:layout_marginBottom="@dimen/all_cups_margin_button">
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
             </com.google.android.material.imageview.ShapeableImageView>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_Police_IMG_14"
@@ -253,7 +273,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/police"
-                android:layout_marginBottom="@dimen/all_cups_margin_button">
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
             </com.google.android.material.imageview.ShapeableImageView>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_Police_IMG_17"
@@ -261,7 +282,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/police"
-                android:layout_marginBottom="@dimen/all_cups_margin_button">
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
             </com.google.android.material.imageview.ShapeableImageView>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/main_Police_IMG_20"
@@ -269,6 +291,253 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/police"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_BTN_Layout"
+        android:orientation="horizontal"
+        android:layout_below="@id/main_heart_layout"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/figures_hor_lay_margin_left"
+        android:layout_marginRight="@dimen/figures_hor_lay_margin_right">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_Coins_Lane_0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_15"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_18"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:visibility="invisible"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_Coins_Lane_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/figure_between_margin">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_13"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_16"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_19"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main_Coins_Lane_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/figure_between_margin2">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_14"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_17"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:layout_marginBottom="@dimen/all_cups_margin_button"
+                android:visibility="invisible">
+            </com.google.android.material.imageview.ShapeableImageView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_Coin_IMG_20"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/coin"
+                android:visibility="invisible"
                 >
             </com.google.android.material.imageview.ShapeableImageView>
 
@@ -277,6 +546,9 @@
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
 
 
     <androidx.appcompat.widget.LinearLayoutCompat

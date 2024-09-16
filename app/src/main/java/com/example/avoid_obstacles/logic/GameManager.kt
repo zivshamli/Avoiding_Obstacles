@@ -8,6 +8,7 @@ class GameManager(private val lifeCount:Int=3) {
     private var randFlag :Int=0
     private var randLane :Int=0
     private var crush:Int=0
+    private var score_game:Int=0
 
     fun isGameLost():Boolean{
         return crush==lifeCount
@@ -53,6 +54,11 @@ class GameManager(private val lifeCount:Int=3) {
             obstaclesArr[randLane]=1
 
         }
+        else if(randFlag==2)
+        {
+            randLane=Random.nextInt(0,Constants.COLS)
+            obstaclesArr[randLane]=2
+        }
 
     }
     fun getObstaclesArr():IntArray{
@@ -63,12 +69,20 @@ class GameManager(private val lifeCount:Int=3) {
         return crush
     }
 
-    fun checkCollision(current_lane:Int):Boolean{
+    fun getScore():Int{
+        return score_game
+    }
+
+    fun checkCollision(current_lane:Int):Int{
         if(obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]==1) {
             crush++
-            return true
+            return 1
         }
-        return false
+        else if(obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]==2) {
+            score_game+=50
+            return 2
+        }
+        return 0
 
     }
 

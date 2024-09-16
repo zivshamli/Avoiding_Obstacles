@@ -45,4 +45,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.play.services.maps)
+
+    implementation(libs.play.services.location)
+    //Gson:
+    implementation (libs.gson)
 }

@@ -5,36 +5,51 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_300"
-    tools:context=".ScoreActivity">
+    android:background="@drawable/background_menu_gradient"
+    tools:context=".ScoreActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/score_LBL_result"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="@dimen/default_margin"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green_A400"
         android:textSize="@dimen/score_size"
         android:textStyle="bold"
-        tools:text="Status\n000"/>
+        tools:text="Status\n000"
+        android:layout_marginBottom="@dimen/score_LBL_bottom_margin"/>
 
-<com.google.android.material.button.MaterialButton
-        android:id="@+id/main_BTN_replay"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_record_table"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:gravity="center"
         android:contextClickable="true"
-        tools:text="Replay"
+        android:text="@string/record_table"
+        android:textStyle="bold"
         android:textSize="@dimen/btn_text_size"
-        app:iconSize="@dimen/BTN_height"
-        app:icon="@drawable/replay"
         android:background="@color/purple_800"
         android:layout_below="@id/score_LBL_result"
         android:layout_margin="@dimen/default_margin"
         />
-
-
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:text="@string/replay"
+            android:textSize="@dimen/btn_text_size"
+            android:background="@color/purple_800"
+            app:icon="@drawable/replay"
+            app:iconGravity="textStart"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_below="@id/main_BTN_record_table"
+            android:layout_marginHorizontal="@dimen/replay_BTN_horizon_margin"
+            />
 
 </RelativeLayout>
