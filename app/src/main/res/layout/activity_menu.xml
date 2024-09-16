@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:background="@drawable/background_menu_gradient">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_GameName_LBL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/game_name_LBL_top_margin"
+            android:text="@string/game_name"
+            android:textSize="@dimen/game_name_text_size"
+            android:textColor="@color/green_A400">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_top_margin"
+            android:gravity="center_horizontal"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_sensor_LBL"
+                tools:text="@string/sensors"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/score_LBL_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/green_A400"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/main_sensor_Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:thumbTint="@color/green_A400"
+                app:trackTint="@color/purple_800"
+                android:textColor="@color/green_A400"
+                >
+            </com.google.android.material.switchmaterial.SwitchMaterial>
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_top_margin"
+            android:gravity="center_horizontal"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_speed_LBL"
+                tools:text="@string/normal"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/score_LBL_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/green_A400"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/main_speed_Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:thumbTint="@color/green_A400"
+                app:trackTint="@color/purple_800"
+                android:textColor="@color/green_A400"
+               >
+            </com.google.android.material.switchmaterial.SwitchMaterial>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_top_margin"
+            android:gravity="center_horizontal"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_A400"
+                android:id="@+id/main_start_BTN"
+                android:text="@string/play"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size">
+
+            </com.google.android.material.button.MaterialButton>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/menu_top_margin"
+            android:gravity="center_horizontal"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_A400"
+                android:id="@+id/menu_BTN_record_table"
+                android:text="@string/record_table"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size">
+
+            </com.google.android.material.button.MaterialButton>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</RelativeLayout>
