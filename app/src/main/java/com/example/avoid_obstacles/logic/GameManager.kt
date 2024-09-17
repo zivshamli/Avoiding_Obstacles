@@ -86,4 +86,8 @@ class GameManager(private val lifeCount:Int=3) {
 
     }
 
+    fun odometer() {
+        score_game++
+    }
+
 }

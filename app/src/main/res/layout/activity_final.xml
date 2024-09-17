@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,4 +24,27 @@
         android:layout_weight="1"
         android:background="@color/green_A400"
         android:padding="@dimen/default_padding"/>
+
+    <FrameLayout
+        android:id="@+id/main_FRAME_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/final_home_BTN_height"
+        android:layout_weight="0.1111111111111111"
+        android:background="@drawable/background_menu_gradient"
+        >
+
+       <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+           android:id="@+id/final_BTN_home"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center_horizontal"
+           android:backgroundTint="@color/purple_800"
+           app:icon="@drawable/replay"
+           android:contentDescription="@string/home"
+           app:iconTint="@color/white">
+
+
+       </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+    </FrameLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

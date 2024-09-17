@@ -2,6 +2,8 @@ package com.example.avoid_obstacles.utilities
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.avoid_obstacles.models.ScoreList
+import com.google.gson.Gson
 
 class SharedPreferencesManagerV3 private constructor(context: Context) {
     private val sharedPref: SharedPreferences =
@@ -32,5 +34,16 @@ class SharedPreferencesManagerV3 private constructor(context: Context) {
 
     fun getString(key: String, defaultValue: String): String {
         return sharedPref.getString(key, defaultValue) ?: defaultValue
+    }
+    fun getScoreListFromSP():ScoreList{
+        val gson= Gson()
+        val scorelist: ScoreList
+        val scoreListString=SharedPreferencesManagerV3.getInstance().getString(Constants.SCORELIST_KEY,"")
+        if (scoreListString.isEmpty()){
+            return ScoreList()
+        }
+        scorelist=gson.fromJson(scoreListString, ScoreList::class.java)
+
+        return scorelist
     }
 }

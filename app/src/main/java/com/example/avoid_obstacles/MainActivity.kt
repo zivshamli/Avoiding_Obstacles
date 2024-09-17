@@ -16,6 +16,7 @@ import com.example.avoid_obstacles.interfaces.Callback_TiltCallback
 import com.example.avoid_obstacles.logic.GameManager
 import com.example.avoid_obstacles.utilities.Constants
 import com.example.avoid_obstacles.utilities.MoveDetector
+import com.example.avoid_obstacles.utilities.SharedPreferencesManagerV3
 import com.example.avoid_obstacles.utilities.SoundManager
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.imageview.ShapeableImageView
@@ -37,21 +38,28 @@ class MainActivity : AppCompatActivity() {
     private var timerOn:Boolean = false
     private var speed_Flag:Boolean=false
     private var sensor_Flag:Boolean=false
-    private var speed:Long=700L //DELAY
+    private var speed:Long=Constants.REGULAR //DELAY
     private lateinit var moveDetector: MoveDetector
     val soundManager: SoundManager = SoundManager(this)
 
 
     val runnable: Runnable = object : Runnable {
         override fun run() {
+            odometer()
             obstaclesGamePlay()
+
             if (isEnd==false) {
                 refreshUI()
             }
             handler.postDelayed(this,   speed)
         }
     }
-            override fun onCreate(savedInstanceState: Bundle?) {
+
+    private fun odometer() {
+        gameManager.odometer()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_main)
                 findViews()
@@ -68,6 +76,8 @@ class MainActivity : AppCompatActivity() {
                 }else{
                     enableButtonsAndDisableSensors()
                 }
+
+
 
             }
 
@@ -96,20 +106,20 @@ class MainActivity : AppCompatActivity() {
             }
         }, object : Callback_SpeedCallback {
             override fun fastSpeed() {
-               speed=500L
+               speed=Constants.FAST
             }
 
             override fun regularSpeed() {
-                speed=700L
+                speed=Constants.REGULAR
             }
         } )
     }
 
     private fun speedChoice() {
         if (speed_Flag){
-            speed=500L
+            speed=Constants.FAST
         }else{
-            speed=700L
+            speed=Constants.REGULAR
         }
     }
 

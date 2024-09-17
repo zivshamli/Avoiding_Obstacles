@@ -1,21 +1,18 @@
 package com.example.avoid_obstacles
 
 import android.Manifest
-import android.annotation.SuppressLint
-import android.content.DialogInterface
+
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 import com.example.avoid_obstacles.models.Score
 import com.example.avoid_obstacles.models.ScoreList
 import com.example.avoid_obstacles.utilities.Constants
@@ -81,14 +78,14 @@ class ScoreActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-    private fun showNameInputDialog(score: Int) { // מבקש מהמשתמש את השם ושומר את הפרטים בטבלה
+    private fun showNameInputDialog(score: Int) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("insert your name")
 
         input = EditText(this)
         builder.setView(input)
-        builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, id -> onClick(score) })
-        builder.setNegativeButton("Cancel" , DialogInterface.OnClickListener { dialog, id -> dialog.cancel() })
+        builder.setPositiveButton("OK") { dialog, id -> onClick(score) }
+        builder.setNegativeButton("Cancel") { dialog, id -> dialog.cancel() }
 
 
 
@@ -129,7 +126,7 @@ class ScoreActivity : AppCompatActivity() {
                 scorelist.scoresArrayList.sort()
                 val scorelistString=gson.toJson(scorelist)
                 managerV3.putString(Constants.SCORELIST_KEY,scorelistString)
-                changeActivity()
+
             }
 
 

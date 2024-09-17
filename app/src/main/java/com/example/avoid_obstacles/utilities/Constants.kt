@@ -15,6 +15,9 @@ class Constants {
         const val DELAY: Long = 700L
         const val CRUSHTEXT:String="CRUSH"
        const val LOCATION_PERMISSION_REQUEST_CODE = 1001
+        const val FAST :Long=500L
+        const val REGULAR :Long=700L
+
 
     }
 }

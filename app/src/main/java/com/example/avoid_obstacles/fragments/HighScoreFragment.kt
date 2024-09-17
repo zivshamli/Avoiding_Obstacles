@@ -5,33 +5,55 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.avoid_obstacles.R
-import com.example.avoid_obstacles.models.ScoreList
-import com.example.avoid_obstacles.utilities.Constants
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
+import com.example.avoid_obstacles.adapter.ScoreAdapter
+import com.example.avoid_obstacles.databinding.FragmentHighScoreBinding
+import com.example.avoid_obstacles.interfaces.Callback_HighScoreCallback
+import com.example.avoid_obstacles.interfaces.Callback_ScoreCallback
+import com.example.avoid_obstacles.models.Score
+
 import com.example.avoid_obstacles.utilities.SharedPreferencesManagerV3
-import com.google.android.material.textview.MaterialTextView
-import com.google.gson.Gson
+
 
 
 class HighScoreFragment : Fragment() {
 
-
-
+    private lateinit var binding : FragmentHighScoreBinding
+    var highScoreCallback: Callback_HighScoreCallback?=null
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        val v=inflater.inflate(R.layout.fragment_high_score, container, false)
+        binding=FragmentHighScoreBinding.inflate(inflater,container,false)
+        val view=binding.root
+        val scoreList=SharedPreferencesManagerV3.getInstance().getScoreListFromSP()
 
-        return v
+        val scoreAdapter=ScoreAdapter(scoreList.scoresArrayList)
+        scoreAdapter.callback_ScoreCallback=object : Callback_ScoreCallback {
+            override fun scoreClicked(score: Score, position: Int) {
+                highScoreCallback?.getLocation(score.lat,score.lon)
+            }
+
+        }
+        binding.mainRVScoresList.adapter=scoreAdapter
+
+        val linearLayoutManager=LinearLayoutManager(this.context)
+        linearLayoutManager.orientation= RecyclerView.VERTICAL
+        binding.mainRVScoresList.layoutManager=linearLayoutManager
+
+        return view
+
     }
 
-
-
-
-
-
 }
+
+
+
+
+
+

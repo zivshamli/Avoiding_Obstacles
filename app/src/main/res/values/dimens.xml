@@ -33,6 +33,7 @@
     <dimen name="line_corner_radius">20dp</dimen>
     <dimen name="line_elevation">10dp</dimen>
     <dimen name="size_table">20sp</dimen>
+    <dimen name="final_home_BTN_height">15dp</dimen>
 
 
 </resources>

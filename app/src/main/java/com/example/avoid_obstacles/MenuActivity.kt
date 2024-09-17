@@ -43,7 +43,11 @@ class MenuActivity : AppCompatActivity() {
         main_sensor_LBL.text=getString(R.string.buttons)
         main_speed_Switch.setOnCheckedChangeListener { _, isChecked -> speedChoice(isChecked) }
         main_sensor_Switch.setOnCheckedChangeListener { _, isChecked -> sensorChoice(isChecked) }
-        main_record_table_BTN.setOnClickListener { view: View -> changeActivityToRecordTable()}
+
+
+            main_record_table_BTN.setOnClickListener { changeActivityToRecordTable()}
+
+
 
         main_play_BTN.setOnClickListener {view :View ->
             if (sensor_Flag) {
