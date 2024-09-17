@@ -16,7 +16,6 @@ import com.example.avoid_obstacles.interfaces.Callback_TiltCallback
 import com.example.avoid_obstacles.logic.GameManager
 import com.example.avoid_obstacles.utilities.Constants
 import com.example.avoid_obstacles.utilities.MoveDetector
-import com.example.avoid_obstacles.utilities.SharedPreferencesManagerV3
 import com.example.avoid_obstacles.utilities.SoundManager
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.imageview.ShapeableImageView

@@ -49,7 +49,7 @@ class FinalActivity : AppCompatActivity() {
             .commit()
 
 
-        btn_home.setOnClickListener { v: View -> changeActivitytoMenu() }
+        btn_home.setOnClickListener { changeActivitytoMenu() }
 
 
     }

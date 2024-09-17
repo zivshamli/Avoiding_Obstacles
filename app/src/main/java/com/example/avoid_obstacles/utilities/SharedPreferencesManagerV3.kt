@@ -38,7 +38,7 @@ class SharedPreferencesManagerV3 private constructor(context: Context) {
     fun getScoreListFromSP():ScoreList{
         val gson= Gson()
         val scorelist: ScoreList
-        val scoreListString=SharedPreferencesManagerV3.getInstance().getString(Constants.SCORELIST_KEY,"")
+        val scoreListString=getInstance().getString(Constants.SCORELIST_KEY,"")
         if (scoreListString.isEmpty()){
             return ScoreList()
         }
