@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     private  lateinit var  gameManager: GameManager
     private lateinit var main_IMG_hearts: Array<ShapeableImageView>
     private lateinit var main_score_LBL: MaterialTextView
-    private var current_lane:Int=1
+    private var current_lane:Int=2
     private  val handler: Handler = Handler(Looper.getMainLooper())
     private  var isEnd:Boolean=false
     private var timerOn:Boolean = false
@@ -145,7 +145,9 @@ class MainActivity : AppCompatActivity() {
                 main_Player_IMGS = arrayOf(
                     findViewById(R.id.main_Player_IMG_0),
                     findViewById(R.id.main_Player_IMG_1),
-                    findViewById(R.id.main_Player_IMG_2)
+                    findViewById(R.id.main_Player_IMG_2),
+                    findViewById(R.id.main_Player_IMG_3),
+                    findViewById(R.id.main_Player_IMG_4)
                 )
 
                 enemy_IMGS = arrayOf(
@@ -170,6 +172,25 @@ class MainActivity : AppCompatActivity() {
                     findViewById(R.id.main_Police_IMG_18),
                     findViewById(R.id.main_Police_IMG_19),
                     findViewById(R.id.main_Police_IMG_20),
+                    findViewById(R.id.main_Police_IMG_21),
+                    findViewById(R.id.main_Police_IMG_22),
+                    findViewById(R.id.main_Police_IMG_23),
+                    findViewById(R.id.main_Police_IMG_24),
+                    findViewById(R.id.main_Police_IMG_25),
+                    findViewById(R.id.main_Police_IMG_26),
+                    findViewById(R.id.main_Police_IMG_27),
+                    findViewById(R.id.main_Police_IMG_28),
+                    findViewById(R.id.main_Police_IMG_29),
+                    findViewById(R.id.main_Police_IMG_30),
+                    findViewById(R.id.main_Police_IMG_31),
+                    findViewById(R.id.main_Police_IMG_32),
+                    findViewById(R.id.main_Police_IMG_33),
+                    findViewById(R.id.main_Police_IMG_34),
+                    findViewById(R.id.main_Police_IMG_35),
+                    findViewById(R.id.main_Police_IMG_36),
+                    findViewById(R.id.main_Police_IMG_37),
+                    findViewById(R.id.main_Police_IMG_38),
+                    findViewById(R.id.main_Police_IMG_39)
                 )
                 main_IMG_hearts= arrayOf(
                     findViewById(R.id.main_IMG_heart0),
@@ -198,6 +219,25 @@ class MainActivity : AppCompatActivity() {
                     findViewById(R.id.main_Coin_IMG_18),
                     findViewById(R.id.main_Coin_IMG_19),
                     findViewById(R.id.main_Coin_IMG_20),
+                    findViewById(R.id.main_Coin_IMG_21),
+                    findViewById(R.id.main_Coin_IMG_22),
+                    findViewById(R.id.main_Coin_IMG_23),
+                    findViewById(R.id.main_Coin_IMG_24),
+                    findViewById(R.id.main_Coin_IMG_25),
+                    findViewById(R.id.main_Coin_IMG_26),
+                    findViewById(R.id.main_Coin_IMG_27),
+                    findViewById(R.id.main_Coin_IMG_28),
+                    findViewById(R.id.main_Coin_IMG_29),
+                    findViewById(R.id.main_Coin_IMG_30),
+                    findViewById(R.id.main_Coin_IMG_31),
+                    findViewById(R.id.main_Coin_IMG_32),
+                    findViewById(R.id.main_Coin_IMG_33),
+                    findViewById(R.id.main_Coin_IMG_34),
+                    findViewById(R.id.main_Coin_IMG_35),
+                    findViewById(R.id.main_Coin_IMG_36),
+                    findViewById(R.id.main_Coin_IMG_37),
+                    findViewById(R.id.main_Coin_IMG_38),
+                    findViewById(R.id.main_Coin_IMG_39)
                 )
                 main_score_LBL=findViewById(R.id.main_score_LBL)
             }
