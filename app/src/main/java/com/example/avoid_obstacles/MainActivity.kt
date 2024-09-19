@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     private var sensor_Flag:Boolean=false
     private var speed:Long=Constants.REGULAR //DELAY
     private lateinit var moveDetector: MoveDetector
-    val soundManager: SoundManager = SoundManager(this)
+    private val soundManager: SoundManager = SoundManager(this)
 
 
     val runnable: Runnable = object : Runnable {
