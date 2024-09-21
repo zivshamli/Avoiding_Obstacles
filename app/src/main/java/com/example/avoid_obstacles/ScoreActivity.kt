@@ -80,7 +80,7 @@ class ScoreActivity : AppCompatActivity() {
     }
     private fun showNameInputDialog(score: Int) {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("insert your name")
+        builder.setTitle("Insert your name")
 
         input = EditText(this)
         builder.setView(input)

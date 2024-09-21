@@ -1,21 +1,20 @@
 package com.example.avoid_obstacles
 
 import android.content.Intent
-import android.os.Build
+
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.VibrationEffect
-import android.os.Vibrator
-import android.os.VibratorManager
+
 import android.view.View
-import android.widget.Toast
+
 import androidx.appcompat.app.AppCompatActivity
 import com.example.avoid_obstacles.interfaces.Callback_SpeedCallback
 import com.example.avoid_obstacles.interfaces.Callback_TiltCallback
 import com.example.avoid_obstacles.logic.GameManager
 import com.example.avoid_obstacles.utilities.Constants
 import com.example.avoid_obstacles.utilities.MoveDetector
+import com.example.avoid_obstacles.utilities.SignalManager
 import com.example.avoid_obstacles.utilities.SoundManager
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.imageview.ShapeableImageView
@@ -272,40 +271,12 @@ class MainActivity : AppCompatActivity() {
                 gameManager.obstaclesMovement()
                 obstaclesMove()
             }
-             private fun toast(text: String) {
-                Toast
-                .makeText(
-                    this,
-                        text,
-                         Toast.LENGTH_SHORT
-                    ).show()
-             }
-    private fun vibrate() {
-        val vibrator: Vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            val vibratorManager =
-                this.getSystemService(VIBRATOR_MANAGER_SERVICE) as VibratorManager
-            vibratorManager.defaultVibrator
-        } else {
-            this.getSystemService(VIBRATOR_SERVICE) as Vibrator
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
 
-
-            val oneShotVibrationEffect = VibrationEffect.createOneShot(
-                500,
-                VibrationEffect.DEFAULT_AMPLITUDE
-            )
-            vibrator.vibrate(oneShotVibrationEffect)
-        } else {
-            vibrator.vibrate(500)
-        }
-    }
     fun toastAndVibrate(text: String)
     {
-        toast(text)
-        vibrate()
+        SignalManager.getInstance().toast(text)
+        SignalManager.getInstance().vibrate()
         soundManager.playSound(R.raw.police_siren)
     }
 
@@ -323,7 +294,7 @@ class MainActivity : AppCompatActivity() {
         if(gameManager.isGameLost()){
             isEnd=true
             stopTimer()
-            changeActivity("Game Over😭")
+            changeActivity()
         }
         else{
             //display score
@@ -334,10 +305,10 @@ class MainActivity : AppCompatActivity() {
             checkCollision()
         }
     }
-    private fun changeActivity(message: String){
+    private fun changeActivity(){
         val intent = Intent(this, ScoreActivity::class.java)
         val b = Bundle()
-        b.putString(Constants.STATUS_KEY,message)
+
         b.putInt(Constants.SCORE_KEY,gameManager.getScore())
         intent.putExtras(b)
         startActivity(intent)

@@ -18,13 +18,13 @@ class SoundManager(private val context: Context) {
                 setVolume(1.0f, 1.0f)
                 start()
 
-                // חיווי כשהצליל מתחיל
+
                 Log.d("BackgroundSound", "Sound started")
 
                 setOnCompletionListener {
-                    // חיווי כשהצליל מסתיים
+
                     Log.d("BackgroundSound", "Sound completed")
-                    release() // שחרור המדיה פלייר בסיום
+                    release()
                     mediaPlayer = null
                 }
             }
