@@ -82,8 +82,8 @@ class MainActivity : AppCompatActivity() {
     private fun enableButtonsAndDisableSensors() {
         main_FAB_right.visibility=View.VISIBLE
         main_FAB_left.visibility=View.VISIBLE
-        main_FAB_left.setOnClickListener { view: View? -> playerMove(Constants.LEFT) }
-        main_FAB_right.setOnClickListener { view: View? -> playerMove(Constants.RIGHT) }
+        main_FAB_left.setOnClickListener { playerMove(Constants.LEFT) }
+        main_FAB_right.setOnClickListener { playerMove(Constants.RIGHT) }
     }
 
     private fun enableSensorsAndDisableButtons() {
