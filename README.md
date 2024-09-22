@@ -9,9 +9,9 @@ After three hearts come down the game is over.
 # HW 2
 
 ## Description
-This project is a continuation of the previous assignment. The required features and details are illustrated in the image below:
+This project is a continuation of the previous assignment. 
 
-![Image of requirements](https://moodle.afeka.ac.il/pluginfile.php/89101/mod_assign/intro/HW2.jpg)
+
 
 ### Additional Features:
 1. **Menu Screen**:
@@ -30,5 +30,6 @@ This project is a continuation of the previous assignment. The required features
 ### Instructions for Running
 1. Clone the repository.
 2. Open the project in Android Studio.
-3. Run the project on an Android device or emulator.
+3. Add Add Maps API keys if necessary
+4. Run the project on an Android device or emulator.
 
