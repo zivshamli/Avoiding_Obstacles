@@ -288,6 +288,9 @@ class MainActivity : AppCompatActivity() {
                 main_IMG_hearts[main_IMG_hearts.size-gameManager.getCrush()].visibility=View.INVISIBLE
             }
         }
+        else if(gameManager.checkCollision(current_lane)==2){
+            soundManager.playSound(R.raw.coin_recieved)
+        }
     }
    fun refreshUI()
     {
