@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
-import android.view.View
 import android.widget.EditText
 
 import androidx.appcompat.app.AlertDialog
@@ -54,8 +53,8 @@ class ScoreActivity : AppCompatActivity() {
             append("Score: ")
             append(score.toString())
         }
-        main_BTN_record_table.setOnClickListener { view: View -> changeActivity() }
-        main_BTN_replay.setOnClickListener { view: View -> changeActivitytoMenu() }
+        main_BTN_record_table.setOnClickListener { changeActivity() }
+        main_BTN_replay.setOnClickListener { changeActivitytoMenu() }
     }
 
     private fun changeActivitytoMenu() {
@@ -84,8 +83,8 @@ class ScoreActivity : AppCompatActivity() {
 
         input = EditText(this)
         builder.setView(input)
-        builder.setPositiveButton("OK") { dialog, id -> onClick(score) }
-        builder.setNegativeButton("Cancel") { dialog, id -> dialog.cancel() }
+        builder.setPositiveButton("OK") { _, _ -> onClick(score) }
+        builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
 
 
 

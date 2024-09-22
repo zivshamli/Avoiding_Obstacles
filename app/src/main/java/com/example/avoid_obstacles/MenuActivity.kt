@@ -49,7 +49,7 @@ class MenuActivity : AppCompatActivity() {
 
 
 
-        main_play_BTN.setOnClickListener {view :View ->
+        main_play_BTN.setOnClickListener {
             if (sensor_Flag) {
                 speed_Flag=false
             }
