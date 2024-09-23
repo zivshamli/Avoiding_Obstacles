@@ -30,6 +30,6 @@ This project is a continuation of the previous assignment.
 ### Instructions for Running
 1. Clone the repository.
 2. Open the project in Android Studio.
-3. Add Add Maps API keys if necessary
+3. Add Add Maps API keys in local properties if necessary 
 4. Run the project on an Android device or emulator.
 
