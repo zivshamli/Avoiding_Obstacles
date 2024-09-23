@@ -33,3 +33,12 @@ This project is a continuation of the previous assignment.
 3. Add Add Maps API keys in local properties if necessary 
 4. Run the project on an Android device or emulator.
 
+---
+
+### Google Maps API Key Setup
+
+1. Open the `local.properties` file in the root of your project.
+2. Add the following line to the file, replacing `YOUR_API_KEY` with your actual API key:
+
+   ```properties
+   MAPS_API_KEY=YOUR_API_KEY
