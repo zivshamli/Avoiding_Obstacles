@@ -74,11 +74,15 @@ class GameManager(private val lifeCount:Int=3) {
     }
 
     fun checkCollision(current_lane:Int):Int{
-        if(obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]==1) {
+        if(obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]==1)
+        {
+            obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]=0
             crush++
             return 1
         }
-        else if(obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]==2) {
+        else if(obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]==2)
+        {
+            obstaclesArr[(Constants.ROWS-1)*Constants.COLS+current_lane]=0
             score_game+=50
             return 2
         }
